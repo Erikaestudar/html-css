@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: dimgray;
+    margin: 0;
+}
+
+header{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+nav{
+    background-color: rgb(102, 102, 102);
+    padding: 3px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+    /*box-shadow: 5px (deslocamento horizontal) 
+                  3px (deslocamento vertical)
+                  7px (blur - embassamento da sombra)
+                  1px (spread - espalhamento da sombra)
+
+    box-shadow: inset 5px (deslocamento horizontal) 
+                      3px (deslocamento vertical)
+                      7px (blur - embassamento da sombra)
+                      1px (spread - espalhamento da sombra)
+    */
+}
+
+nav > a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+main{
+    background-color: white;
+    border-radius: 10px 0px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.384);
+}
+
+article{
+    background-color: lightgray;
+    padding: 5px;
+}
+
+
+article > aside{
+    background-color: rgb(165, 165, 165);  
+}
+
+
+
+div#bola{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    margin: 20px 150px;
+    border-radius: 50%;
+    display: none;
+}
+
+.ball:hover div#bola{
+    display: block;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 4px;
+    margin: 0;
+}
+
+footer > p{
+    margin: 0;
+}

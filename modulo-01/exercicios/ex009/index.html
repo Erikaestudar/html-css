@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <p> Ordered List &lt;ol&gt; (essa tag sempre deixará sua lista ordenada, não importando se mais tarde você tiver que acrescentar mais itens) and List Item &lt;li&gt;.</p>
+    <ol>
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Escovar os dentes</li>
+        <li>Tomar café</li>
+    </ol>
+    <p>A tag &lt;ol&gt; possui um parâmetro <code>type</code>, onde configuramos o tipo de marcador da lista atual. As opções de valores para esse parâmetro são:</p>
+    <ul type="square">
+        <li>1 - Valor padrão. Cria listas numeradas. Ex:1, 2, 3, 4, ...</li>
+        <li>A - Cria listas alfabéticas em maiúsculas. Ex: A, B, C, D, ...</li>
+        <li>a - Cria listas alfabéticas em minúsculas. Ex: a, b, c, d, ...</li>
+        <li>I - Cria listas com algarismos romanos em maiúsculas. Ex: I, II, III, IV, ...</li>
+        <li>i - Cria listas com algarismos romanos em minúculas. Ex: i, ii, iii, iv, ...</li>
+    </ul>
+    <p>Você também pode indicar o início da contagem usando o parâmetro <code>start</code>.</p>
+    <p> Ex:</p>
+    <ol type="I" start="5">
+        <li>Lavar roupa</li>
+        <li>Almoçar</li>
+        <li>Estudar programação</li>
+    </ol>
+    <h2>Listas não Ordenadas</h2>
+    <p><strong>Unordered List</strong> <code>ul</code> (são aquelas onde a ordem dos itens não influenciará no significado da lista)</p>
+    <ul>
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+    <p>O marcador padrão é bolinha preta (<code>disc</code>), mas existe a opção de configurar a propriedade <code>type</code> da tag &lt;ul&gt; com os seguintes valores:</p>
+    <ul type="circle">
+        <li> disc - padrão. Uma bola preta totalmente pintada</li>
+        <li>circle - Uma bola com uma borda preta e sem preenchimento</li>
+        <li>square - Um pequeno quadrado preto totalmente pintado</li>
+        <li>none - Tira os marcadores da lista</li>
+    </ul>
+    <h2>Juntando listas versão 1.0</h2>
+    <h3>Minhas linguagens favoritas</h3>
+    <ol><!--Aninhamento - um comando dentro da outra como se fosse um ninho-->
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a" start="5"><!--O correto é deixar a, b, c, d (Mas só vamos deixar por título de curiosidade, para você poder dar uma lembrada depois)-->
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+    <h3>Meus jogos favoritos</h3>
+    <ol>
+        <li>Famicom</li>
+        <ul type="square">
+            <li>Mario Bros</li>
+            <ul type="circle">
+                <li>Super Mario Bros 3</li>
+                <li>Super Mario World</li>
+            </ul>
+            <li>Donkey Kong</li>
+            <ul type="circle">
+                <li>Donkey Kong 2</li>
+                <li>Donkey Kong 3</li>
+            </ul>
+            <li>Bomberman</li>
+        </ul>
+        <li>MegaDrive</li>
+        <ul type="square">
+            <li>Sonic</li>
+            <li>Golden Axe</li>
+            <li>Ecco the Dolphin</li>
+        </ul>
+        <li>PlayStation</li>
+        <ul type="square">
+            <li>Final Fantasy</li>
+            <li>Biohazard</li>
+            <li>Dino Crisis</li>
+            <li>Metal Gear Solid</li>
+        </ul>
+    </ol>
+    <h2>Lista de Definições</h2>
+    <p>A lista de definições está dentro de uma tag <code>&lt;dl&gt;</code> (<em>definition list</em>), cada termo é um <code>&lt;dt&gt;</code> (<em>definition term</em>) e cada descrição é um <code>&lt;dd&gt;</code> (<em>definition description</em>).</p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação utilizada para criar o conteúdo de sites.</dd>
+
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a especificação de estilos em sites.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para criar interatividades em sites.</dd>
+    </dl>
+
+    <p>Acompanhe com o material em PDF do <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/09%20-%20Listas%20HTML.pdf" target="_blank" rel="external">Capítulo 9</a>.</p>
+</body>
+</html>

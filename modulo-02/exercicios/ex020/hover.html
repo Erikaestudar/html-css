@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div > p{
+            display: none;
+        }
+
+        div:hover > p{
+            display: block;
+            color: white;
+            background-color: red;
+            font-size: 3em;
+            width: 510px;
+        }
+
+        div:hover{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <P>Fim do exemplo</P>
+
+    <p>Para esconder o parágrafo que está dentro da <code>div</code> você deve usar esse parâmetro &gt;, que significa que o <code>p</code> é filho de uma <code>div</code>.</p>
+    <blockquote><pre><code>
+        div &gt; p{
+            display: none;
+        }
+    </code></pre></blockquote>
+
+    <p>Para que o parágrafo <code>&lt;p&gt;</code> que está dentro da <code>&lt;div&gt;</code> apareça, deve-se colocar uma pseudo-classe, mais o parâmetro &gt; que indica de o <code>&lt;p&gt;</code> é filho da <code>&lt;div&gt;</code>.</p>
+    <blockquote><pre><code></code>
+        div:hover &gt; p{
+            display: block;
+            color: white;
+            background-color: red;
+            font-size: 3em;
+            width: 510px;
+        }
+    </code></pre></blockquote>
+    
+    <blockquote><pre><code></code>
+        div:hover{
+            color: red;
+        }
+    </code></pre></blockquote>
+    
+    <p><a href="links.html">Links</a></p>
+    <p><a href="pseudoclass.html">Pseudo-Classes</a></p>
+</body>
+</html>

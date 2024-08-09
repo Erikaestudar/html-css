@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda Personalizda</title>
+    <style>
+        h1{
+            border: 12px solid transparent;
+            padding: 10px;
+            border-image-source: url("borda.png");
+            border-image-slice: 26;
+            border-image-repeat: repeat;
+        }
+
+        h2{
+            border: 12px solid black;
+            padding: 10px;
+            /*Shorthand*/
+            border-image: url("borda.png") 26 stretch;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de borda Repeat</h1>
+    <blockquote><pre><code>
+        h1{
+            border: 20px solid transparent;
+            padding: 10px;
+            border-image-source: url("borda.png");
+            border-image-slice: 26;
+            border-image-repeat: repeat;
+
+            /*Shorthand*/
+            border-image: url("borda.png") 26 repeat;
+        }
+    </code></pre></blockquote>
+    <p>É necessário ter esse código para segurar a borda <code>border: 20px solid transparent;</code> se tirá-la ela deixa de existir. Pode ocorrer de alguns navegadores não ser compatível se colocar cor e imagem na borda, podendo ser uma boa opção deixar o border <code>transparent</code>.</p>
+    <h2>Teste de borda Stretch</h2>
+    <blockquote><pre><code>
+        h2{
+            border: 20px solid black;
+            padding: 10px;
+            border-image-source: url("borda.png");
+            border-image-slice: 26;
+            border-image-repeat: stretch;
+
+            /*Shorthand*/
+            border-image: url("borda.png") 26 stretch;
+        }
+    </code></pre></blockquote>
+</body>
+</html>

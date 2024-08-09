@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Personalizados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="principal" class="avancado">Criando Sites em HTML e CSS</h1>
+    <h1>Seletores Personalizados</h1>
+    <p>Para criar estilos personalizados, precisamos aprender a utilizar os seletores de <code>id</code> (#) e de <code>class</code> (.) de maneira eficiente. </p>
+    <h2>Selector id (#)</h2>
+    <p>Com o seletor <code>id</code> <strong>identificamos</strong> um determinado elemento único, criando um estilo especial para esse elemento isolado.</p>
+    <blockquote><pre><code>&lt;h1 id="principal"&gt;Criando Sites em HTML e CSS&lt;/h1&gt;</code></pre></blockquote>
+    <h2>Selector class (.)</h2>
+    <p>Já com um <code>class</code> nós <strong>agrupamos</strong> elementos múltiplos que tenham caracteríticas semelhantes, uma <strong>classe</strong> vai identificar à qual um ou mais elementos perteçam e assim compartilhando características em comum a todos os os que faça parte deese grupo.</p>
+<blockquote><code>
+        <h2 class="basico">HTML básico - &lt;h2 class="basico">HTML&lt;/h2&gt;</h2>
+        <h2 class="intermediario">HTML intermediário - &lt;h2 class="intermediario"&gt;HTML&lt;/h2&gt;</h2>
+        <h2 class="avancado">HTML avançado - &lt;h2 class="avancado"&gt;HTML&lt;/h2&gt;</h2>
+        <h2 class="basico">CSS básico - &lt;h2 class="basico"&gt;CSS&lt;/h2&gt;</h2>
+        <h2 class="intermediario">CSS intermediário - &lt;h2 class="intermediario"&gt;CSS&lt;/h2&gt;</h2>
+        <h2 class="avancado">CSS avançado - &lt;h2 class="avancado"&gt;CSS&lt;/h2&gt;</h2>
+    </code></blockquote>
+    <p>Pode colocar uma <code>class</code> dentro de <code>id</code>. Lembrando para revisar os comandos para não sobrepor entre si.</p>
+<blockquote>
+    <p><code>
+        <h1 id="principal" class="avancado">Criando Sites em HTML e CSS</h1>
+        &lt;h1 id="principal" class="avancado"&gt;Criando Sites em HTML e CSS&lt;/h1&gt;
+    </code>
+    </p>
+</blockquote>
+
+<p>Pode colocar uma <code>class</code> dentro de outra <code>class</code>. Lembrando para revisar os comandos para não sobrepor entre si.</p>
+<blockquote>
+    <p><code>
+        <h2 class="avancado destaque">Mais uma regra:</h2>
+        &lt;h2 class="avancado destaque"&gt;Mais uma regra:&lt;/h2&gt;
+    </code>
+    </p>
+</blockquote>
+
+    <h2><span class="avancado">Se liga na regra:</span></h2>
+    <p>Em um mesmo documento HTML, só podemos usar um <code>id</code> para um único elemento. Porém, podemos atribuir um mesmo <code>class</code> para vários elementos que possuam essa mesma característica.</p>
+    <h2 class="avancado destaque">Mais uma regra:</h2>
+    <p>Todo <code>id</code> em HTML e identificado na CSS por um símbolo #.</p>
+    <p>Toda <code>class</code> em HTML é identificada nas CSS por um ponto.</p>
+
+    <h2>Material em PDF</h2>
+    <p><a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/15%20-Seletores%20personalizados.pdf" target="_blank" rel="external">Capítulo 15</a></p>
+</body>
+</html>

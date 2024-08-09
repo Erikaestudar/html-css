@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    <!-- Forma simples de colocar
+    <video src="midia-video/meu-video.ogv" width="500" controls></video>
+    -->
+    <!--Fazendo um conta básica! Pegando o vídeo mais leve 11,5x1000 (usuários por dia) = 11,500 mg de downlods, 11,500/1,024 = 11,2 gb de consumo de banda-->
+    <video width="600" poster="imagens/limoes-capa.png" controls autoplay>
+        <source src="midia-video/meu-video.mp4" type="video/mp4">
+        <source src="midia-video/meu-video.m4v" type="video/mp4">
+        <source src="midia-video/meu-video.webm" type="video/webm">
+        <source src="midia-video/meu-video.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+    <p>Caso o arquivo esteja hospedado no nosso próprio servidor usamos a tag <code>&lt;video&gt;</code></p>
+    <blockquote><pre><code>
+&lt;video width="600" poster="imagens/limoes-capa.png" controls autoplay&gt;
+    &lt;source src="midia-video/meu-video.mp4" type="video/mp4"&gt;
+    &lt;source src="midia-video/meu-video.m4v" type="video/mp4"&gt;
+    &lt;source src="midia-video/meu-video.webm" type="video/webm"&gt;
+    &lt;source src="midia-video/meu-video.ogv" type="video/ogg"&gt;
+    &lt;p&gt;Seu navegador não tem compatibilidade com reprodução de vídeos.&lt;/p&gt;
+&lt;/video&gt;
+    </code></pre></blockquote>
+    <ul type="square">
+        <li><code>width</code> vai indicar a largura que o vídeo vai ter na tela. Nesse exemplo, 600px.</li>
+        <li><code>poster</code> configura uma imagem que vai aparecer como uma capa, enquanto o visitante não aperta o play para reproduzir o vídeo.</li>
+        <li><code>controls</code> vai configurar se os controles do vídeo vão aparecer na parte inferior da mídia. Por padrão, os controles não aparecerão, mas basta colocar a palavra <code>controls</code> na tag &lt;video&gt;.</li>
+        <li><code>autoplay</code> diz para o navegador se o vídeo vai começar a tocar automaticamente, assim que a página for carregada.</li>
+    </ul>
+    <h2>Que formatos são esses?</h2>
+    <p>Os vídeos possuem formatos e codecs e isso pode tornar o vídeo inviável de ser reproduzido pela maioria dos navegadores na maioria dos dispositivos. É preciso prestar muita atenção nesse pequeno detalhe.</p>
+    <p>Os formatos suportados são MPEG, WEBM e OGG, mas os dois primeiros são os que possuem maior compatibilidade com os navegadores atualmente.</p>
+    <blockquote>
+        <table>
+            <thead>
+                <tr>
+                    <th>Navegador</th>
+                    <th>Arquivos compatíveis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Microsoft Edge</td>
+                    <td>.mp4 .m4v</td>
+                </tr>
+                <tr>
+                    <td>Apple Safari</td>
+                    <td>.mp4 .m4v</td>
+                </tr>
+                <tr>
+                    <td>Google Chrome</td>
+                    <td>.mp4 .m4v .webm .ogv</td>
+                </tr>
+                <tr>
+                    <td>Mozilla Firefox</td>
+                    <td>.webm .ogv</td>
+                </tr>
+                <tr>
+                    <td>Opera</td>
+                    <td>.webm .ogv</td>
+                </tr>
+            </tbody>
+        </table>
+    </blockquote>
+    <h3><img src="imagens/logo.png" alt="dica"><strong>Handbrake</strong></h3>
+    <p>É programa open source, e um ótimo conversor para gerar arquivos em vários formatos, usando codecs padronizados, disponível para várias plataformas.</p>
+    <p><a href="https://handbrake.fr/downloads.php" target="_blank" rel="external">https://handbrake.fr/downloads.php</a></p>
+    <h3>Hospedar seus próprios vídeos pode ser caro</h3>
+    <p>Quando colocamos vídeos no nosso próprio servidor, podemos passar por problemas com alto consumo de banda, site lento e incompatibilidades com alguns navegadores por conta dos codecs.</p>
+    <p>Um vídeo simples, em formato mp4 com codec padrão deve ocupar uns 150MB com facilidade. Agora imagine que você lance seu site e 200 visitantes acessem seu site e reproduzam o vídeo. Pronto, você acabou de utilizar 29GB de tráfego, isso pode deixar seu site lento ou consumir sua franquia de hospedagem, caso não seja ilimitada.</p>
+<blockquote><pre><code>
+        150MB / 1024 = 0,14648438
+        0,14648438 x 200 = 29GB
+</code></pre></blockquote>
+    <h1>O <strong>YouTube</strong> ou o <strong>Vimeo</strong></h1>
+    <p>Esses são serviços para a hospedagem de vídeos que vai evitar consumir nossos próprios recursos de host contratado. Cada um tem suas vantagens e desvantagens.</p>
+    <ul>
+        <li> O <strong>YouTube</strong> é o serviço de hospedagem de vídeos mais popular do mundo e é gerenciado pelo Google. Sua principal vantagem é que seus servidores são ultra rápidos. Por outro lado, a ideia do Google é deixar todos os vídeos públicos e disponíveis, o que pode ser uma dor de cabeça caso uma escola online, por exemplo, queira limitar o acesso apenas para os alunos matriculados.</li>
+        <li>O <strong>Vimeo</strong> permite limitar quem vai poder ver o vídeo, o que é especialmente vantajoso para quem quer criar produtos em forma de vídeo, entregues por demanda dentro de um site personalizado. Como desvantagens desse serviço, ele é pago por uma taxa anual e seus algoritmos não são tão eficientes quanto os do YouTube, logo os vídeos apresentam pequenos travamentos às vezes.</li>
+    </ul>
+    <h2>Inserindo vídeos do YouTube</h2>
+    <p>Para incorporar vídeos que você subiu no <strong>YouTube</strong> ou <strong>Vimeo</strong>, existem recursos que te dão o código pronto em HTML5. </p>
+    <p>No <strong>YouTube</strong>, abra o vídeo que você quer incorporar e clique no link <big>COMPARTILHAR</big> que fica abaixo do título.</p>
+    <p>Ao clicar no link indicado anteriormente, uma janela vai aparecer, te dando as opções de compartilhamento. Escolha o item <big>INCORPORAR.</big></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=Xw6HJ_qRVGjntIaX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <blockquote><code>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=Xw6HJ_qRVGjntIaX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;</code></blockquote>
+    <p>O código HTML personalizado vai aparecer em uma nova janela de contexto, incluindo um botão que permite <big>COPIAR</big> o código com a tag do <code>&lt;iframe&gt;</code> que vai aparecer diretamente na sua página. Volte ao seu editor de código e cole a tag no seu arquivo HTML que vai apresentar o vídeo.</p>
+    
+    <h2>Inserindo vídeos do Vimeo</h2>
+    <p><iframe src="https://player.vimeo.com/video/356868182?h=989fe5d592" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></p>
+    <p><iframe src="https://player.vimeo.com/video/197093965?color=ff9933&portrait=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+    <blockquote>
+        <p><a href="index.html" target="_self" rel="prev">Colocando Imagens</a></p>
+        <p><a href="pg002.html" target="_self" rel="next">Reproduzindo Áudio</a></p>
+    </blockquote>
+</body>
+</html>

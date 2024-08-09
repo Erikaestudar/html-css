@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="japanese.ico" type="image/x-icon">
+    <title>Teste de Favicon</title>
+</head>
+<body>
+    <h1>Direitos Autorais</h1>
+    <p>Acompanhe o conteúdo em PDF<a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/06%20-%20Imagens%20e%20Favicon.pdf" target="_blank" rel="external"> Capítulo 6</a>.</p>
+    <p>Um especialista em Direito Digital <strong>Alan Moreira Lopes</strong> fala sobre direitos autorais com muito mais propriedades. A partir de 29min ele responde umas perguntas bem comuns. <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bkym20GqOoQ?si=0pC2s4WH0vvgPrNF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+
+    <blockquote>
+        <p>Um caso que ficou muito famoso na Internet foi com o <a href="https://youtu.be/SJacdAbjdZI" target="_blank" rel="external"><strong>canal Nostalgia</strong></a> do Felipe Castanhari.</p>
+    </blockquote>
+
+    <p>Para que você seja profissionalmente capaz de criar sites com imagens que não vão gerar processos, existem quatro maneiras simples:</p>
+    <ol>
+        <li>Seja o criador da própria arte. Use fotos que seu próprio cliente tirou ou que você mesmo criou.</li>
+        <li>Consiga uma autorização legal de quem é o detentor dos direitos autorais. Isso precisa de documentos específicos para tal.</li>
+        <li>Compre o direito de usar a imagem. Existem vários sites como o <strong>iStockPhoto</strong>, <strong>DepositPhotos</strong>, <strong>ShutterStock</strong>, etc. Só fica de olho aberto e leia as regras, pois na maioria dos casos essa imagem que você comprou só pode ser usada uma única vez ou em um único projeto.</li>
+        <li>Use imagens de domínio público, pois essas você tem a liberdade de colocar no seu site, seguindo as regras estabelecidas pelo autor.</li>
+    </ol>
+
+        <h2>Imagens de domínio público</h2>
+        Existem vários sites que oferecem imagens de domínio público para serem usados em seus projetos, lembrando, leia atentamente as instruções para uso dessas.
+        <ul>
+            <li><a href="https://unsplash.com/pt-br" target="_blank" rel="external">UnSplash</a></li>
+            <li><a href="https://www.pexels.com/pt-br/" target="_blank" rel="external">Pexels</a></li>
+            <li><a href="https://br.freepik.com/" target="_blank" rel="external">FreePik</a></li>
+            <li><a href="https://www.rawpixel.com/free-images" target="_blank" rel="external">Rawpixel</a></li>
+            <li><a href="https://pixabay.com/" target="_blank" rel="external">Pixabay</a></li>
+            <li><a href="https://www.librestock.com/photos/nature/" target="_blank" rel="external">Libreshot</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/Wikimedia_Commons" target="_blank" rel="external">Wikimedia Commons</a></li>
+        </ul>
+
+        <h3>Formatos de Imagem</h3>
+        <p>O algoritmo de compactação <strong>JPEG</strong> é usado para gerar imagens fotográficas com um tamanho extremamente reduzido. Ele foi criado em 1983 por <strong>Eric Hamilton</strong> e hoje é gerenciado pelo <strong>Join Photographics Experts Group</strong>. Ele é amplamente utilizado por câmeras digitais modernas e programas de tratamento de imagens. A grande vantagem do uso de arquivos <strong>JPG</strong> (em formato JPEG) é gerar arquivos muito pequenos e que ocupam pouco espaço.</p>
+        <p>O formato <strong>Portable Network Graphics</strong> (PNG) surgiu em 1996, desenvolvido pelo <strong>W3C</strong> (o mesmo órgão que gerencia a linguagem HTML) com o objetivo de substituir o formato <strong>GIF</strong>. Ele também é um formato compactado, mas não tanto quanto o JPEG. A principal característica do <strong>PNG</strong> - e que diferencia do JPEG - é a capacidade configurar a opacidade de cada pixel (deixá-lo transparente ou com transparência limitada).</p>
+        <h4>Código do exercício 003.</h4><blockquote><pre><code>
+&lt;p&gt;Abaixo você vai ver uma imagem que está na mesma pasta.&lt;/p&gt;
+&lt;img src="logo-html.png" alt="Logo HTML5"&gt;
+&lt;p&gt;Podemos também carregar imagens que estão em sub-pastas.&lt;/p&gt;
+&lt;img src="imagens/logo-css.png" alt="Logo CSS3"&gt;
+&lt;p&gt;Também podemos carregar imagens externas. (URL)&lt;/p&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Javascript_on_figma.png" alt="Logo JavaScript"&gt;
+</code></pre></blockquote>
+    <p>A tag <code>&lt;img&gt;</code> é responsável por carregar imagens que estão na pasta do projeto atual ou em links externos. Essa tag tem como parâmetros básicos o <code>src</code> (que vem de <em>source</em>, origem) e <code>alt</code> (que vem de <em>alternative</em> ou texto alternativo).</p>
+    <p><strong>DICA IMPORTANTE!</strong> Não digite a tag <code>&lt;img&gt;</code> com os colchetes angulares. No lugar disso, digite apenas <code>img</code> e pressione a tecla <strong>Enter</strong>, e o próprio editor vai sugerir a inserção da imagem (incluindo as propriedades básicas <code>src</code> e <code>alt</code>). Dentro das aspas do parâmetro <code>src</code> pressione <strong>Ctrl + Espaço</strong>, vai aparecer uma listagem com todos os arquivos disponíveis na pasta do seu projeto.</p>
+
+    <h3>Para que servem os textos alternativos?</h3>
+    <p>Toda imagem deve ter um texto alternativo, eles ajudam muito na indexação do seu site em mecanismos de busca e tamb~em ajudam muito na <strong>Acessibilidade</strong>, pois se um visitante for deficiente visual, seu navegador vai ser capaz de descrever que tipo de foto está sendo mostrada ali. Tente ser objetivo na descrição da sua imagem, mas crie textos que fazem sentido. </p>
+    
+   <h2>Usando Ícone de Favoritos (favicon)</h2>
+   <p>São pequenos ícones que aparecem ao lado dos sites que visitamos, na parte superior do seu navegador, é o mesmo local onde aparecem o texto que você colocou na tag <code>&lt;title&gt;</code> do seu site. Geralmente está no formato <strong>ICO</strong>, existem outros formatos suportados para o seu favicon, como o próprio <strong>PNG</strong> e o formato <strong>SVG</strong>, que é vetorizado e seria a melhor das opções, mas infelizmente nem todo navegador é compatível com esse formato.</p>
+   <ul>
+    <li>Se quiser baixar alguns ícones prontos, recomendo o site <a href="https://www.iconarchive.com/" target="_blank" rel="external">IconArchive</a></li>
+    <li>Para criar / desenhar seu favicon tem o site <a href="https://www.favicon.cc/" target="_blank" rel="external">favicon.cc</a></li>
+    <li>Se seu objetivo é criar um ícone personalizado para seu site baseado em imagens que você já tem, recomendo o site <a href="https://favicon.io/" target="_blank" rel="external">favicon.io</a></li>
+   </ul>
+   <p>Para adicionar, vá na sua área <code>&lt;head&gt;</code> digite <code>link</code> para o editor lhe dar algumas opções e escolha a opção <code>link:favicon</code>.</p>
+</body>
+</html>

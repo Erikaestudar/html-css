@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="box01.html" target="_self" rel="prev">Box01</a>
+            <a href="box03.html" target="_self" rel="next">Box03</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="assuntos">
+            <p>Usando a estrutura semântica do site.</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Grouping Tags Semanticas</h2>
+<p><blockquote><pre><code>
+box-shadow: 5px 3px 7px 1px black;
+box-shadow: 5px (deslocamento horizontal) 
+            3px (deslocamento vertical)
+            7px (blur - embassamento da sombra)
+            1px (spread - espalhamento da sombra)
+        
+box-shadow: inset 5px 3px 7px 1px black;
+box-shadow: inset 5px (deslocamento horizontal) 
+                  3px (deslocamento vertical)
+                  7px (blur - embassamento da sombra)
+                  1px (spread - espalhamento/ alcance da sombra)
+</code></pre></blockquote></p>
+                <aside>
+                    <p>Artigo escrito por Guanabara</p>
+                </aside>
+            </article>
+
+            <article>
+                <h2>Caixas com Vértices Arredondados</h2>
+<p><blockquote><pre><code>
+        SHORTHAND
+        border-radius: 10px 0px;<br>
+        border-top-left-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+</code></pre></blockquote></p>
+                <div class="ball">
+                    
+<p><blockquote><pre><code>
+        div#bola{
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            margin: auto;
+            border-radius: 50%;
+            }
+</code></pre></blockquote></p>
+            <div id="bola"></div>
+            </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido pelo Cursoem Video</p>
+    </footer>
+</body>
+</html>

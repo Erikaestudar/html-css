@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+    <h2>Código-fonte / Pré-formatação</h2>
+        <p>O comando document.getElementById('teste') é escrito em linguagem JavaScript.</p>
+        <p>A tag &lt;code&gt; deixa as letras mono-espaçadas, facilitando a leitura do código.</p>
+        <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p>
+    <h3>Exemplo de código em Python.</h3>
+        <code>
+            num = int(input('Digite um número'))
+            if num % 2 == 0:
+                print(f'O número {num} é par')
+            else:
+                print(f'O número {num} é ímpar')
+            print('FIM DO PROGRAMA')
+        </code>
+        <p>Para manter o texto pré-formatado, exatamente da mesma maneira na qual ele foi digitado, incluindo quebras de linhas, espaços e tabulações. Vamos usar outra tag HTML chamada &lt;pre&gt;.</p>
+        <pre>
+            <code>
+    num = int(input('Digite um número'))
+    if num % 2 == 0:
+        print(f'O número {num} é par')
+    else:
+        print(f'O número {num} é ímpar')
+    print('FIM DO PROGRAMA')
+            </code>
+        </pre>
+        <p>Segurando a tecla SHIFT + TAB você pode mover o texto selecionado para a esquerda e somente usando a tecla TAB você pode deixar um recuo para direita da tela.</p>
+
+    <h2><q>Citações</q></h2>
+    <h3>Citações simples (sem quebra de linha)</h3>
+        <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido.</q></p>
+    <h3>Citações completas (que tenham um parágrafo só para si)</h3>
+        <p>Podemos colocar um link para o texto original, usando a parâmetro     <code>cite</code> dentro da tag &lt;backquote&gt;.
+        </p>
+        <p>Segundo Jeff Noble, no seu livro HTML para leigos:</p>
+        <blockquote cite="https://books.google.com.br/books?id=E8ZtDwAAQBAJ&pg=PA17&dq=HTML&hl=pt-BR&sa=X&ved=0ahUKEwjH5-PevNboAhVNIbkGHcoxCOgQ6AEIOjAC#v=onepage&q=HTML&f=false">
+            A diferença entre elementos inline e um bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos de texto.
+        </blockquote>
+    <h2>Abreviações</h2>
+        <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
+        <h2>Texto invertido</h2>
+        <p>Tag &lt;bdo dir="rtl"&gt; ("rtl" - right to left or "ltr - left to right")</p>
+        <p><bdo dir="rtl">Este texto todo está invertido no formato RIGHT-TO-LEFT.</bdo></p>
+        <p><bdo dir="ltr">Estou aprendendo a criar coisas em HTML.</bdo></p>
+</body>
+</html>

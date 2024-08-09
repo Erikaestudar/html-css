@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Áudios com HTML5</title>
+</head>
+<body>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <p>Com a HTML5 basta usar uma tag &lt;audio&gt; e &lt;source&gt;.</p>
+    <!--Podemos baixar alguns áudios no youTube (perfil-youTube studio - Biblioteca de áudio), nos filtros se escolher atribuição necessária DEVE-SE copiar e colar os direitos autorais da música-->
+    <!--MP3, WAV (é muito pesado, não é recomendavel usar no site), OGG
+    <audio src="midia/heaven-is-a-place-on-earth.mp3" controls autoplay></audio> 
+    O autoplay não está compatível com o navegador.-->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/heaven-is-a-place-on-earth.mp3" type="audio/mpeg">
+        <source src="midia/heaven-is-a-place-on-earth.wav" type="audio/wav">
+        <source src="midia/heaven-is-a-place-on-earth.ogg" type="audio/ogg">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/heaven-is-a-place-on-earth.mp3" download="heaven-is-a-place-on-earth.mp3" type="audio/mpeg">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+<blockquote><pre><code>    
+&lt;audio preload="metadata" autoplay controls loop&gt;
+    &lt;source src="midia/heaven-is-a-place-on-earth.mp3" type="audio/mpeg"&gt;
+    &lt;source src="midia/heaven-is-a-place-on-earth.wav" type="audio/wav"&gt;
+    &lt;source src="midia/heaven-is-a-place-on-earth.ogg" type="audio/ogg"&gt;
+    &lt;p&gt;Infelizmente seu navegador não consegue reproduzir áudio. 
+    &lt;a href="midia/heaven-is-a-place-on-earth.mp3" download="heaven-is-a-place-on-earth.mp3" type="audio/mpeg"&gt;
+    Clique aqui para baixar o arquivo MP3&lt;/a&gt;&lt;/p&gt;
+&lt;/audio&gt;
+</code>
+</pre></blockquote>
+    <p>Analisando os principais atributos da tag &lt;audio&gt;:</p>
+    <ul type="disc">
+        <li>O atributo <code>preload</code> indica se o áudio será pré-carregado ou não e aceita três valores:</li>
+        <ul type="circle">
+            <li><code>metadata</code> vai carregar apenas as informações sobre o arquivo (tamanho, tempo, informações de direitos, etc.)</li>
+            <li><code>none</code> não vai carregar absolutamente nada até que o usuário clique no botão play ou um script inicie a reprodução.</li>
+            <li><code>auto</code> (padrão) vai carregar o arquivo de áudio inteiro assim que a página for carregada, mesmo que o usuário nunca aperte o play.</li>
+        </ul>
+        <li>O atributo <code>controls</code> vai apresentar o player na tela. Caso não seja colocado na tag &lt;audio&gt;, o controle será transparente e o usuário não poderá interagir com ele.</li>
+        <li>O atributo <code>autoplay</code>, quando inserido, vai iniciar a reprodução do áudio assim que a página for carregada.</li>
+        <li>O atributo <code>loop</code> vai fazer com que o áudio seja repetido eternamente assim que terminar a sua reprodução.</li>
+    </ul>
+    <p>Dentro da tag &lt;audio&gt;, adicionamos vários &lt;source&gt; com formatos diferentes do mesmo áudio. Coloque na parte de cima o seu formato favorito. Os demais só serão carregados caso o de cima falhe. Caso todos falhem, criamos um parágrafo que permite o download do arquivo MP3 para ouvir no player padrão do dispositivo.</p>
+    <h2><strong>Guanacast N&deg; 33</strong></h2>
+    <p>Podcast sobre a História da Computação.</p>
+    <audio src="midia/guanacast-33.mp3" controls ></audio>
+    <h2><strong>Nerdcast Episódios #211 e #332</strong></h2>
+    <p>Sobre profissões de Programador e de Professor - com Gustavo Guanabara <br> Você pode acessar o site e conferir.</p>
+    <p><abbr title="Nerdcast"><a href="https://jovemnerd.com.br/busca?full_search=gustavo%20guanabara&type=podcast" target="_blank" rel="external">Clique Aqui!</a></abbr></p>
+
+    <blockquote>
+        <p><a href="index.html" target="_self" rel="prev">Colocando Imagens</a></p>
+        <p><a href="pg003.html" target="_self" rel="next">Formatos de Vídeos</a></p>
+    </blockquote>
+</body>
+</html>

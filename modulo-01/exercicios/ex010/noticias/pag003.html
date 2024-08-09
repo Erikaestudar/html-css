@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <title>Terceira página</title>
+</head>
+<body>
+    <h1>Terceira página</h1>
+    <p>Esta é a terceira página.</p>
+    <h2>Atributo <code>rel</code></h2>
+    <p>O <code>rel</code> indica qual é a natureza do destino, esse atributo aceita vários valores, entre eles vou citar:</p>
+    <blockquote>
+        <ul>
+            <li><code>next</code> indica que o link é para a próxima parte do documento atual</li>
+            <li><code>prev</code> indica que o link é para a parte anterior do documento atual</li>
+            <li><code>author</code> indica que é um link para o site do autor do artigo atual</li>
+            <li><code>external</code> indica que é um link para outro site que não faz parte do site atual</li>
+            <li><code>nofollow</code> indica que é um link para um site não endossado,como um link pago</li>
+        </ul>
+    </blockquote>
+    <p>Os dois primeiros valores são usados em um <strong>link local</strong> ou <strong>link interno</strong>, já que ele leva o visitante a outra página dentro do nosso próprio site. Note que não é necessário nem indicar a <abbr title="Uniform Resource Locator">URL</abbr> completa nesses casos.</p>
+    <blockquote>
+        <p><a href="../index.html" rel="next">Voltar para o início</a></p>
+        <p><code>&lt;a href="../index.html" rel="next"&gt;Voltar para o início&lt;/a&gt;</code></p>
+        <p><a href="../pag002.html" rel="prev">Voltar para a segunda página</a></p>
+        <p><code>&lt;a href="../pag002.html" rel="prev"&gt;Voltar para a segunda página&lt;/a&gt;</code></p>
+    </blockquote>
+    <p>Chamamos de <strong>link interno</strong> quando o link nos leva para outro site. Nestes casos, devemos indicar a <abbr title="Uniform Resource Locator">URL</abbr> completa, incluindo o protocolo <code>http://</code> ou <code>https://</code> e o caminho que leve à uma página específica, se for necessário.</p>
+    <blockquote>
+        <p><a href="https://economia.uol.com.br/noticias/infomoney/2014/10/09/11-citacoes-famosas-de-steve-jobs-que-todo-empreendedor-deveria-conhecer.htm" rel="author" target="_blank">https://economia.uol.com.br/noticias/infomoney/2014/10/09/11-citacoes-famosas-de-steve-jobs-que-todo-empreendedor-deveria-conhecer.htm" </a></p>
+            <p><code>&lt;a href="https://economia.uol.com.br/noticias/infomoney/2014/10/09/11-citacoes-famosas-de-steve-jobs-que-todo-empreendedor-deveria-conhecer.htm" rel="author" target="_blank"&gt;https://economia.uol.com.br/noticias/infomoney/2014/10/09/11-citacoes-famosas-de-steve-jobs-que-todo-empreendedor-deveria-conhecer.htm" &lt;/a&gt;</code></p>
+        <p>“Você não pode conectar os pontos olhando para frente, você só pode conectá-los olhando para trás. Então, você tem de confiar que os pontos se ligarão algum dia em seu futuro. Você tem que confiar em alguma coisa - sua garra, destino, vida, carma, o que quiser. Esta abordagem nunca me deixou na mão e faz toda a diferença em minha vida.”... - Steve Jobs </p>
+        <p><a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">Abrir perfil GitHub em nova janela</a></p>
+            <p><code>&lt;a href="https://gustavoguanabara.github.io/" target="_blank" rel="external"&gt; Abrir perfil GitHub em nova janela&lt;/a&gt;</code></p>
+        <p>Esta página é um oferecimento de <a href="https://www.hostnet.com.br" target="_blank" rel="nofollow">Hostnet</a></p>
+            <p><code>&lt;a href="https://www.hostnet.com.br" target="_blank" rel="nofollow"&gt; Hostnet&lt;/a&gt;</code></p>
+    </blockquote>
+    <h2>Curiosidades sobre o mundo <strong>Linux</strong></h2>
+    <p>Os servidores Web normalmente rodam o sistema operacional LINUX. Ao navegar por pastas locais e tiver que se referir à pasta atual do servidor, pode usar ./ antes do nome do arquivo. Se quiser se referir à pasta imediatamente superior na hierarquia, use ../ para voltar um nível para a pasta mais externa.</p>
+    <blockquote>
+        <p><a href="../index.html" rel="next">Voltar para o início</a></p>
+        <p><code>&lt;a href="../index.html" rel="next"&gt;Voltar para o início&lt;/a&gt;</code></p>
+        <p><a href="../pag002.html" rel="prev">Voltar para a segunda página</a></p>
+        <p><code>&lt;a href="../pag002.html" rel="prev"&gt;Voltar para a segunda página&lt;/a&gt;</code></p>
+    </blockquote>
+
+    <h1>Links para download</h1>
+    <!-- Qdo estiver apenas criando os links vc coloca # entre as aspas duplas
+    <li><a href="#">Baixar o livro em PDF</a></li> -->
+    <p>Outra coisa que aparece bastante em sites são os links para efetuar download de algum material em PDF, ou de um arquivo ZIP qualquer.</p>
+    <p>A partir da verão HTML5, as âncoras receberam atributos especiais para isso. Basta fazer o link diretamente para o arquivo que se deseja efetuar o download e adicionar o atributo <code>download</code> com o valor configurado para o nome do arquivo a ser baixado e o atributo <code>type</code> para indicar ao navegador que tipo de arquivo está sendo baixado. Vamos ver alguns exmplos:</p>
+    <blockquote>
+        <ul>
+            <li><p><a href="../livro/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></p></li>
+            <li><p><a href="../livro/meulivro.zip" download="meulivro.zip" type="application/zip">Livro compactado em ZIP</a></p></li>
+            <li><p><a href="../livro/10 - Ligacoes em toda parte.pdf" download="10 - Ligacoes em toda parte.pdf" type="application/pdf">Baixar o capítulo 10 em PDF</a></p></li>
+            <li><p><a href="../livro/10 - Ligacoes em toda parte.zip" download="10 - Ligacoes em toda parte.zip" type="application/zip">Capítulo 10 compactado em ZIP</a></p></li>         
+        </ul>
+</body>
+</html>

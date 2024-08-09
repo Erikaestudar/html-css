@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Para adaptar nosso conteúdo ao tamanho da tela, devemos gerar imagens de tamanho diferentes e fazer o navegador carregar a imagem certa para cada situação. Para isso, usaremos as tags <code>&lt;picture&gt;</code> e <code>&lt;source&gt;</code>.</p>
+    <p>Para esse exemplo, criamos as três imagens abaixo: a menor tem 300x300px, a média tem 700x700px e a maior tem 1000x1000px. Com o seguinte código base:</p>
+<blockquote>
+        <p><img src="imagens/ex-p.png" alt="imagem P"> <img src="imagens/ex-m.png" alt="imagem M"> <img src="imagens/ex-g.png" alt="imagem G"></p>
+<p><pre><code>  
+    &lt;picture&gt;
+        &lt;img scr="<ins>foto-g.png</ins>" alt="A imagem flexível funciona"&gt;
+    &lt;/picture&gt;
+</code></pre></p></blockquote>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="A imagem flexível funciona">
+    </picture>
+    
+    <p>O problema vai começar a surgir quando a janela do navegador chegar perto dos 1000 pixels de largura, pois a foto não vai mais caber lá. Para resolver esse problema vamos adicionar uma linha:</p>
+    <blockquote><pre><strong>NOTE:</strong> Que mudamos o min-width pelo max-width.<code>
+&lt;picture&gt;
+    &lt;source media="(max-width:1050px)" srcset="foto-m.png" type="image/png"&gt;
+    &lt;img src="<ins>foto-g.png</ins>" alt="A imagem flexível funciona"&gt;
+&lt;/picture&gt;
+</code></pre></blockquote>
+    <p>A tag <code>&lt;source&gt;</code> possui três atributos:</p>
+    <ul type="circle">
+        <li><code>media</code> indica o tamanho máximo a ser considerado para carregar a imagem indicada no atributo <code>srcset</code>.</li>
+        <li><code>srcset</code> vai configurar o nome da imagem que será carregada quando o tamanho indicado for atingido</li>
+        <li><code>type</code> vai indicar o <em>media type</em> da imagem que usamos (veja mais informções sobre <em>media types</em> no capítulo 10 ou no ex010)</li>
+    </ul>
+    <h2><img src="imagens/logo.png" alt="informação adicional"><strong>Atenção!</strong></h2>
+    <p>você pode até colocar o valor exato de 1000px na propriedade max-width, mas vai perceber que um valor ligeiramente acima vai gerar resultados mais interessantes.</p>
+    <p>Você vai perceber que a imagem muda automaticamente conforme aumentamos ou diminuímos o tamanho da tela. <br>Vamos continuar e acrescentar mais um <code>&lt;source&gt;</code> à nossa imagem:</p>
+    <blockquote><pre><strong>NOTE:</strong> Que mudamos o min-width pelo max-width.<code>
+&lt;picture&gt;
+    &lt;source media="(max-width:750px)" srcset="foto-p.png" type="image/png"&gt;
+    &lt;source media="(max-width:1050px)" srcset="foto-m.png" type="image/png"&gt;
+    &lt;img src="<ins>foto-g.png</ins>" alt="A imagem flexível funciona"&gt;
+&lt;/picture&gt;
+        </code></pre></blockquote>
+        <p>É importante que exista uma ordem entre os &lt;source&gt;, e nessa configuração, os itens mais acima sejam os menores tamanhos para o <code>max-width</code> e os seguintes sejam maiores, de forma crescente. O último item dentro de &lt;picture&gt; deve ser a imagem padrão.</p>
+    <blockquote>
+        <p><a href="pg002.html" target="_self" rel="next">Reproduzindo Áudio</a></p>
+        <p><a href="pg003.html" target="_self" rel="next">Formatos de Vídeos</a></p>
+    </blockquote>
+
+    <h2><img src="imagens/logo.png" alt="informação adicional"><strong>Cuidado!</strong></h2>
+    <p> Sites lentos diminuem a <strong>taxa de rentenção </strong>dos usuários, que ficam menos tempo acessando e podem prejudicar a indexação da sua página em mecanismos de busca como <strong>Google</strong>. Veja no vídeo a seguir, um especialista em SEO (otimização para mecanismos de busca) falando sobre lentidão de sites, principalmente via 3G e 4G do celular. </p>
+    <p>Portal SEO:<a href="https://youtu.be/jWnMfvSdo1E" target="_blank" rel="external">https://youtu.be/jWnMfvSdo1E</a></p>  
+</body>
+</html>

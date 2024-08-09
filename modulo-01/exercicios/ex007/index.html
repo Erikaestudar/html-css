@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de Textos</title>
+    <style>
+        .aviso{
+            color:red;
+        }
+        .marcar{
+            background-color:limegreen;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <h1>Principais formatações</h1>
+        <h2>Negrito / Destaque</h2>
+            <p>Nesta frase temos um <b>termo em negrito</b> usando a tag B (não semântica).</p>
+            <p>Nesta frase, tenho um <strong>termo em destaque</strong> usando a tag STRONG (semântica).</p>
+        <h2>Itálico / Ênfase</h2>
+            <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag I (não semântica).</p>
+            <p>Nesta frase, temos um <em>termo em ênfase (emphasis)</em> usando a tag EM (semântica).</p>
+        <h2>Texto marcado</h2>
+            <p>Podemos criar também <mark style="background-color:rgb(0, 255, 191);">um texto marcado</mark> usando a tag MARK.</p>
+            <!--style="background-color:lime;" é um comando CSS-->
+            <p>E no outro parágrafo, temos <mark class="marcar">outro texto marcado</mark> no final.</p>
+        <h2>Texto grande e pequeno</h2>
+            <!--Para Envelopar você aperta o botão CTRL + SHIFT + P > digitar abb - escolher Emmet:Envolver com Abreviação (Emmet: Wrap with Abbreviation)e coloque as tags-->
+            <p>Estamos criando um <big>texto grande</big> usando a tag BIG (tag em desuso) e um <small>texto pequeno</small> usando a tag SMALL nesse parágrafo.</p>
+        <h2>Texto deletado</h2>
+            <p>Podemos marcar com a tag STRIKE (não semântica) <strike>um texto, como excluído,</strike> para indicar que ele deve ser lido, mas não considerado.</p>
+            <p>Podemos marcar com a tag DEL (semântica)<del> um texto como excluído</del> para indicar que ele deve ser lido, mas não considerado.</p>
+        <h2>Texto inserido</h2>
+            <p>Podemos marcar com a tag INS (semântica)<ins> um texto como inserido</ins> para dar uma ênfase e indicar que ele foi adicionado depois.</p>
+            <p>Existe também o <u>sublinhado</u> com a tag U (não semântica)</p>
+        <h2>Texto sobrescrito</h2>
+            <p>Para inserir coisas do tipo x<sup>20</sup>+3, usando a tag SUP.</p>
+        <h2>Texto subscrito</h2>
+            <p>Para inserir coisas do tipo H<sub>2</sub>O, usando a tag SUB.</p>
+
+        
+            <p>Acesse o material em PDF do<a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/08%20-%20Formata%C3%A7%C3%A3o%20de%20Textos.pdf" target="_blank" rel="external"> <mark>Capítulo 8 </mark></a>.</p>
+        
+
+        <h2 class="aviso">Fique sempre de olho:</h2>
+            <p>Existe um documento oficial do Consórcio da <strong>World Wide Web (W3C)</strong> que é atualizado constantemente com as tags que estão ficando <ins>obsoletas</ins> e algumas <ins>substituições</ins> desejáveis que devemos fazer.</p>
+            <p>Diferenças entre HTML4 e 5: <a href="https:www.w3.org/TR/html5-diff/#absent-attributes" target="_blank" rel="external">https:www.w3.org/TR/html5-diff/#absent-attributes</a></p>
+            <p>Elementos obsoletos na HTML5: <a href="https://dev.w3.org/html5/spec-LC/obsolete.html" target="_blank" rel="external">https://dev.w3.org/html5/spec-LC/obsolete.html</a></p>
+    </body>
+</body>
+</html>
