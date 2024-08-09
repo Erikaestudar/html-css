@@ -22,4 +22,4 @@ Estou aprendendo a criar sites e agora vou gerenciar meus repositórios.
 <p><a href ="https://erikaestudar.github.io/html-css/modulo-01/exercicios/ex013/index.html">Executar o exercício 013</a></p>
 <p><a href ="https://erikaestudar.github.io/html-css/modulo-01/exercicios/ex014/index.html">Executar o exercício 014</a></p>
 <p><a href ="https://erikaestudar.github.io/html-css/modulo-01/exercicios/ex015/index.html">Executar o exercício 015</a></p>
-<p><a href ="https://erikaestudar.github.io/html-css/modulo-01/exercicios/ex015/pagina02.html">Executar o exercício 015 pagina02</a></p>
+<p><a href ="https://erikaestudar.github.io/html-css/modulo-01/exercicios/ex015/pagina02.html">Executar o exercício 015 pg002</a></p>
