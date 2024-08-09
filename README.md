@@ -18,4 +18,4 @@ Estou aprendendo a criar sites e agora vou gerenciar meus repositórios.
 <p><a href="https://erikaestudar.github.io/html-css/modulo-01/html-css-desafios/d009/pg002.html">Executar o desafio 009 pg002</a></p>
 <p><a href="https://erikaestudar.github.io/html-css/modulo-01/html-css-desafios/d009/pg003.html">Executar o desafio 009 pg003</a></p>
 <p><a href="https://erikaestudar.github.io/html-css/modulo-01/html-css-desafios/d009/pg004.html">Executar o desafio 009 pg004</a></p>
-<p><a href="https://erikaestudar.github.io/html-css/modulo-01/html-css-desafios/d010/d010.html">Executar o desafio 010</a></p>
+<p><a href="https://erikaestudar.github.io/html-css/modulo-02/html-css-desafios/d010/d010.html">Executar o desafio 010</a></p>
