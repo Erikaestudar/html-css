@@ -55,6 +55,39 @@ section{
     padding: 10vh 0 10vh 30px;
 }
 
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+
+section#imagem01{
+    background-image: url("..imagens/background001.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    height: 100vh;
+}
+
+#imagem02{
+    background: url("..imagens/background002.jpg") right center no-repeat fixed;
+    background-size: cover;
+
+    height: 100vh;
+}
+
+div.imagem{
+    color: white;
+    background-color: darkgray;
+    background-size: 100% 100%;
+    padding: 10px;
+    width: 450px;
+    height: 500px;
+    box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.543);
+}
+
 footer{
     background-color: black;
     color: white;
