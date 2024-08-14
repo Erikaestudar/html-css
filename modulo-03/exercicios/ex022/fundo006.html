@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagem de Fundo</title>
+    <title>Fundo Fixo de Tela</title>
     <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
         body{
             height: 100vh;
-            background-color: black;
+            /*background-color: black;
             background-image: url("imagens/wallpaper002.jpg");
             background-position: center center;
             background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;*/
+
+            background: black url("imagens/wallpaper002.jpg") center center no-repeat fixed;
             background-size: cover;
         }
 
         main{
             background-color: white;
-            width: 450px;
+            max-width: 450px;
             padding: 20px;
             margin: auto;
             border: 1px solid darkblue;
@@ -25,8 +33,27 @@
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.5em;
         }
+
         main h1{
             text-align: center;
+        }
+
+        main h2{
+            text-align: center;
+            padding: 10px;
+        }
+
+        main p{
+            padding: 10px;
+        }
+
+        main pre{
+            max-width: 400px;
+            margin: auto;
+        }
+
+        ul{
+            list-style-position: inside;
         }
     </style>
 </head>
@@ -34,24 +61,82 @@
     <main>
         <h1>Teste de Imagem de Fundo</h1>
 <pre><code><p>
-    body{
-        height: 100vh;
-        background-color: black;
-        background-image: url("imagens/wallpaper002.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: <em>cover</em>;
-    }
-    main{
-        background-color: white;
-        width: 400px;
-        padding: 10px;
-        margin: auto;
-        border: 1px solid darkblue;
-        border-radius: 15px;
-    }
+body{
+    height: 100vh;
+    background-color: black;
+    background-image: url("imagens/wallpaper002.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: <em>cover</em>;
+}
+main{
+    background-color: white;
+    width: 400px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid darkblue;
+    border-radius: 15px;
+}
 </p></code></pre>
-    <p>Na Propriedade <code>background-size:</code> tem esses valores o <strong>auto</strong> (padrão, a imagem de fundo será aplicada em seu tamanho original), <strong>[length] px</strong> ou <strong>[length]%</strong> (Redimensiona a largura da imagem e faz a altura se adaptar automaticamente. Podemos também informar as duas dimensões na sequência ou também usar valores percentuais), <strong>contain</strong> (Redimensiona a imagem para que ela cubra o contêiner, mesmo que para isso ocorram alguns eventuais cortes) e <strong>cover</strong> (Muda o tamanho da imagem para que ela seja sempre totalmente exibida na tela, sem nenhum corte)</p>
+    <p>Na Propriedade <code>background-size:</code> tem esses valores:
+        <ul> 
+            <li><strong>auto</strong> (padrão, a imagem de fundo será aplicada em seu tamanho original),</li> 
+            <li><strong>[length] px</strong> ou <strong>[length]%</strong> (Redimensiona a largura da imagem e faz a altura se adaptar automaticamente. Podemos também informar as duas dimensões na sequência ou também usar valores percentuais)</li> 
+            <li><strong>contain</strong> (Redimensiona a imagem para que ela cubra o contêiner, mesmo que para isso ocorram alguns eventuais cortes)</li> <li><strong>cover</strong> (Muda o tamanho da imagem para que ela seja sempre totalmente exibida na tela, sem nenhum corte)</li>
+        </ul></p>
+        <h2>Shorthand - background</h2>
+        <p>&#x2714 color  &#x2714 image  &#x2714 position  &#x2714 repeat - [size] - &#x2714 attachment</p>
+        
+        <pre><code>
+body{
+&#x0020  height: 100vh;
+&#x2714  background-color: black;
+&#x2714  background-image: url("imagens/wallpaper002.jpg");
+&#x2714  background-position: center center;
+&#x2714  background-repeat: no-repeat;
+&#x274C background-size: cover;
+}
+</code></pre>
+<p>O <code>background-size</code> não funciona por isso está entre chaves, então você fazer uma outra declaração abaixo do <code>background</code>. Adicionando o <code>background-size</code> com seu valor.</p>
+<pre><code> 
+&#x2714 background: black url("imagens/wallpaper002.jpg") 
+                    center center no-repeat fixed;
+&#x2714 background-size: cover;
+</code></pre>
+
+        <h2>Alinhamento Vertical</h2>
+    <pre><code>
+    &lt;section id="container"&gt;
+        &lt;article id="conteudo"&gt;
+
+        &lt;/article&gt;
+    &lt;/section&gt;
+
+#container{
+    background-color: purple;
+    background-image: url("imagens/target001.png");
+    background-size: 100% 100%;
+
+    position: relative;
+    height: 96vh;
+    padding: 10px;
+}
+
+#conteudo{
+    background: yellow url("imagens/target001.png");
+    background-size: 100% 100%;
+
+    position: absolute;
+    height: 200px;
+    width: 400px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+</code></pre>
+    <p>Transformação de translação para mover o componente 50% para a  esquerda e 50% para cima. Isso porque usou números negativos.</p>
     </main>
 </body>
 </html>
