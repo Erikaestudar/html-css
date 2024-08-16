@@ -22,6 +22,12 @@
             border: 3px solid rgb(224, 18, 18);
         }
 
+        table#t03{
+            width: 400px;
+            height: 400px;
+            border: 3px solid black;
+        }
+
         tr.linha{
             background-color: rgba(171, 171, 172, 0.427);
         }
@@ -34,6 +40,23 @@
         td.dado{
             background-color: yellow;
         }
+
+        tr.vt{
+            vertical-align: top;
+        }
+
+        tr.vb{
+            vertical-align: bottom;
+        }
+
+        tr.hc{
+            text-align: center;
+        }
+
+        tr.hr{
+            text-align: right;
+        }
+
     </style>
 </head>
 <body>
@@ -116,6 +139,28 @@
             <td>A4</td>
             <td class="dado">B4</td>
             <td>C4</td>
+        </tr>
+    </table>
+    <p>Com o <code>text-align:</code> você tem alinhamento horizontal, com os valore: left (padrão), center e right.</p>
+    <p>Para ter o alinhamento vertical usamos o <code>vertical-align:</code> com os valores: top, middle (padrão) e bottom.</p>
+    <table id="t03">
+        <tr class="vt"> <!-- Primeira linha-->
+            <td>A1 - vertical-align: top;
+            <td>B1 - vertical-align: top;
+            <td>C1 - vertical-align: top;
+        <tr class="vb"> <!-- Segunda linha-->
+            <td>A2 - vertical-align: bottom;
+            <td>B2 - vertical-align: bottom;
+            <td>C2 - vertical-align: bottom;
+        <tr class="hc"> <!-- Terceira linha-->
+            <td>A3 - text-align: center;</td>
+            <td>B3 - text-align: center;</td>
+            <td>C3 - text-align: center;</td>
+        </tr>
+        <tr class="hr"> <!-- Quarta linha-->
+            <td>A4 - text-align: right;</td>
+            <td>B4 - text-align: right;</td>
+            <td>C4 - text-align: right;</td>
         </tr>
     </table>
 </body>
