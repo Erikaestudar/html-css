@@ -30,6 +30,10 @@
             color: white;
         }
 
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }
+
         td.num{
             text-align: right;
         }
@@ -218,6 +222,24 @@
             &lt;td class="num"&gt;210.147.125&lt;/td&gt;
         &lt;/tr&gt;
     &lt;/tfoot&gt;
+
+    Efeito Zebrado - usasse uma pseudo-classe <code>:nth-child(..n)</code>
+    
+    tbody &lt; tr:nth-child(2n){
+        background-color: lightgray;
+    }
+
+    No exemplo acima está de duas em duas, mas pode colocar de três, cinco e etc.
+
+    Para números ímpares.
+    tbody &lt; tr:nth-child(odd){   ou  /* (2n-1) */
+        background-color: lightgray;
+    }
+
+    Para números pares.
+    tbody &lt; tr:nth-child(even){  ou /* (2n) */
+        background-color: lightgray;
+    }
             </code></pre>
         </section>
     </main>
