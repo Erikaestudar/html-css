@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        table{
+            width: 550px;
+            border-collapse: collapse;
+        }
+
+        caption{
+            background-color: lightgray;
+            padding: 10px;
+        }
+
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        td.preco{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Tabela de Produtos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Categoria</th>
+                <th scope="col">Produto</th>
+                <th scope="col" style="width: 90px;">Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="5">Multimídia</td>
+                <td>Headphone</td>
+                <td class="preco">R$ 6,00</td>
+            </tr>
+            <tr>
+                <td>WebCam</td>
+                <td class="preco">R$ 13,00</td>
+            </tr>
+            <tr>
+                <td>Placa de Vídeo 512MB</td>
+                <td class="preco">R$ 85,00</td>
+            </tr>
+            <tr>
+                <td>Placa Placa Mãe Asus ROG STRIX B760-F Gaming Wi-Fi, Intel LGA 1700, ATX, DDR5, Wi-Fi - 90MB1CT0-M0EAY0</td>
+                <td class="preco">R$ 1.773,19</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="2">Total</th>
+                <td class="preco"><strong>R$ 1.877,19</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
