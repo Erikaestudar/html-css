@@ -13,6 +13,8 @@
             width: 95vw;
             height: 400px;
             border: 2px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.2em;
         }
     </style>
 </head>
@@ -41,8 +43,19 @@
     </pre>
     </p>
 
-    <iframe id="tela" name="frame" src="" frameborder="0"></iframe>
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1><p>Quando iniciamos a página o <q>iframe</q> está vazio, o ideal é ter um conteúdo dentro dele. Você pode deixar carregado a primeira página utilizando o parâmetro <code>src</code> dentro da tag iframe.</p><p>Ou usar um novo parâmetro que é o <code>srcdoc</code>, dentro desse parâmetro podemos colocar html, que será carregado dentro do <code>iframe</code>, preenchendo com algum conteúdo, enquanto o usuário não seleciona nenhuma opção acima.</p><img src='imagens/github-m.png'><p>Podemos carregar imagens, tomando o cuidado de colocar entre aspas simples.</p>" ></iframe>
+    
+    <h2>Usando o parâmetro <code>src</code></h2>
+    <p><pre>
+    &lt;iframe id="tela" name="frame" src="paginas-extras/pg001.html"&lt;/iframe&gt;
+    </pre></p>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nobis ex eligendi alias nihil, saepe voluptas unde reiciendis maiores, aliquam, sapiente ipsum neque? Odit iure nihil eum omnis autem sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptas porro, nemo eveniet dolor suscipit, nihil quas neque dolore necessitatibus sunt et assumenda aliquid consectetur tempora, iste nesciunt. Voluptatem, eaque!</p>
+    <h2>Usando o parâmetro <code>srcdoc</code></h2>
+    <p><pre>
+    &lt;iframe id="tela" name="frame" srcdoc=
+    "&lt;h1&gt;Escolha uma das opções acima&lt;/h1&gt;&lt;img src='imagens/github-m.png'&gt;"&gt;
+    &lt;/iframe&gt;
+    </pre></p>
+    <p>Podemos carregar imagens, tomando o cuidado de colocar entre aspas simples.</p>
 </body>
 </html>
