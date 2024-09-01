@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#f01{
+            border: 3px solid rgb(170, 12, 12);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.473);
+        }
+
+        iframe#f02{
+            border: 3px solid blue;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.473);
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Como se proteger de ataques maliciosos que pode acontecer durante o uso o iframe no seu site. Um exemplo que pode acontecer é você colocar um site no iframe da sua página e esse site tentar capturar informações de um cadastro.</p>
+
+    <iframe id="f01" src="paginas-extras/pg004.html" sandbox="sandbox" referrerpolicy="no-referrer">
+        Seu navegador não é compatível.
+    </iframe>
+
+    <p>Para bloquear todas as ações potencialmente maliciosas dos sites que você coloca dentro do iframe, você pode usar essas duas configurações, que deixará ligado o máximo de segurança dentro dele.</p>
+<pre><code>      
+    &lt;iframe src="paginas/pg004.html" sandbox="sandbox" referrerpolicy="no-referrer"&gt;
+            Seu navegador não é compatível.
+    &lt;/iframe&gt;
+</code></pre>
+    <ul>
+        <li>sandbox="sandbox" - ele bloqueia todo e qualquer acesso que outros sites que estejam dentro do iframe tentem fazer.</li>
+        <li>referrerpolicy="no-referrer" - o conteúdo que está dentro do iframe não vai coletar nenhum tipo de informação do usuário, como por exemplo o que os sites do Facebook, Google, YouTube e etc faz capturando informações sobre a navegação para mostrar determinadas propagandas.</li>
+    </ul>
+    <p>O <code>referrerpolicy="no-referrer-when-downgrade"</code> é o valor padrão, não precisa coloca-lo.</p>
+
+    <iframe id="f02" src="paginas-extras/pg004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+        Seu navegador não é compatível.
+    </iframe>
+
+    <p>Agora se você quer fazer com que esse formulário funcione, você terá que mudar alguns valores do <code>sandbox</code>.</p>
+    <pre><code>      
+    &lt;iframe src="paginas/pg004.html" sandbox="allow-same-origin allow-forms 
+        allow-scripts" referrerpolicy="no-referrer"&gt;
+            Seu navegador não é compatível.
+    &lt;/iframe&gt;
+    </code></pre>
+    <ul>
+        <li>"allow-same-origin" - permitir conteúdo de mesma origem (mesmo servidor que está sua página).</li>
+        <li>"allow-forms" - permiti o uso de formulários.</li>
+        <li>"allow-scripts" - o HTML5 executa scripts também quando executa formulários.</li>
+    </ul>
+
+
+</body>
+</html>
