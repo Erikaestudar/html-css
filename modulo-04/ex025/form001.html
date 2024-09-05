@@ -24,5 +24,28 @@
         <li><code>method</code> GET ou get - método padrão, na HTML pode usar qualquer um dos dois (maiúscula ou minúscula), nesse método o dados são enviados pela URL.</li>
         <li>POST - No post, os dados não fica visível na URL, mas fica no cabeçario da aba Network da página, só ir em inspecionar.</li>
     </ul>
+    <pre><code>
+        &lt;form action="cadastro.php" method="post" autocomplete="off"&gt;
+            &lt;p&gt;&lt;label for="inome"&gt;Nome:&lt;/label&gt; 
+                &lt;input type="text" name="nome" id="inome"&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;label for="isobrenome"&gt;Sobrenome:&lt;/label&gt; 
+                &lt;input type="text" name="sobrenome" id="isobrenome"&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;input type="submit" value="Enviar"&gt;&lt;/p&gt;
+        &lt;/form&gt;
+    </code></pre>
+    <ul>
+        <li>action - para onde será enviado o cadastro.</li>
+        <li>autocomplete - é quando fica uma pequena janela com sugestão para completar o campo de texto.</li>
+        <li>label - são as ligações do campo de texto (input text) com um texto descritivo, é extremamente para os mecanismos de busca. </li>
+    </ul>
+
+
+    <h2>O que são Labels?</h2>
+    <p>Labels, ou etiquetas em português, são elementos HTML utilizados para rotular elementos de formulário como campos de entrada de texto, caixas de seleção, botões de opção, etc.
+    <ul>
+        <li>As labels identificam a finalidade de cada campo para o usuário, indicando o que deve ser inserido em cada campo.</li>
+        <li>Elas associam o elemento de formulário com um texto descritivo, melhorando a usabilidade e acessibilidade do formulário.</li>
+        <li>As labels ampliam a área clicável de elementos como caixas de seleção e botões de opção, facilitando o preenchimento do formulário pelo usuário.</li>
+    </ul></p>
 </body>
 </html>
