@@ -13,17 +13,20 @@ html {
 }
 
 header {
-    background-color: rgb(158, 158, 158)
+    background-color: rgb(158, 158, 158);
 }
 
 header > h1 {
+    padding-top: 10px;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 menu ul {
     list-style-type: none;
     background-color: gray;
 }
+
 menu li {
     background-color: rgb(75, 75, 75);
     color: white;
@@ -35,4 +38,15 @@ article {
     width: 600px;
     display: block;
     margin: auto;
+}
+
+article h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+article p {
+    text-indent: 30px;
+    line-height: 1.2em;
+    padding: 10px;
 }

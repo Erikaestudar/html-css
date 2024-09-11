@@ -22,11 +22,44 @@
     <main>
         <article>
             <h2>Estou aprendendo a criar Media Queries</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem autem nobis id rem corporis accusantium, animi, voluptatem corrupti, porro expedita ipsam saepe? Non tenetur aut veniam sapiente id saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum numquam sunt dolore voluptatem neque. A, architecto aut? Similique, dolor. Distinctio temporibus incidunt harum iste fuga! Quo temporibus ratione beatae!</p>
+            <p>Media queries, ou consultas de mídia, são blocos de código CSS que permitem que o conteúdo de um site se adapte a diferentes dispositivos e tamanhos de tela. 
+            As media queries permitem: Definir estilos diferentes para diferentes dispositivos, Criar um site responsivo, Personalizar a experiência do usuário, Oferecer opções específicas para dispositivos móveis. 
+            As media queries funcionam de forma a: 
+            Definir condições de um CSS específico 
+            Executar testes, como se a tela do usuário é maior que uma certa largura ou resolução 
+            Aplicar um CSS seletivamente para estilizar a página 
+            As media queries são compostas por um media type e pelo menos uma expressão que limita o escopo das folhas de estilo. As expressões usam media features, como largura, altura e cor.</p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem autem nobis id rem corporis accusantium, animi, voluptatem corrupti, porro expedita ipsam saepe? Non tenetur aut veniam sapiente id saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum numquam sunt dolore voluptatem neque. A, architecto aut? Similique, dolor. Distinctio temporibus incidunt harum iste fuga! Quo temporibus ratione beatae!</p>
+            <h2>Tipos de media ou Media types</h2>
+            <p>Sua funcionalidade serve para direcionar determinado CSS para um meio específico de dispositivo, ou seja, definem para qual tipo de media, o CSS que você aplica em seu site será direcionado.</p>
+                
+            <p>Existem vários media types, aqui, citarei alguns:</p>
+            
+<pre>
+    ▲ print: Para impressoras;
+   
+    @media print {
+        /* Estilizações CSS */
+    }
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat exercitationem autem nobis id rem corporis accusantium, animi, voluptatem corrupti, porro expedita ipsam saepe? Non tenetur aut veniam sapiente id saepe.</p>
+    ▲ screen: Para monitores ou outros dispositivos como computadores, 
+    tablets e smartphones com telas coloridas e com resolução adequada;
+    
+    @media screen and (max-width: 768px){
+        /* Estilizações CSS */
+    }
+
+    ▲ handheld: Para dispositivos de mão.
+    
+    @media handheld and (min-width: 700px) and (orientantion: landscape){
+        /* Estilizações CSS */
+    }
+
+    ▲ all: Para todos os tipos de mídia.
+    @media all and (orientation: landscape){
+        /* Estilizações CSS */
+    }
+</pre>
         </article>
     </main>
 </body>
