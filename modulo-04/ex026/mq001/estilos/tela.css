@@ -50,3 +50,8 @@ article p {
     line-height: 1.2em;
     padding: 10px;
 }
+
+article ul {
+    list-type-position: inside;
+    list-style-type: " \2714\0020\0020"
+}
