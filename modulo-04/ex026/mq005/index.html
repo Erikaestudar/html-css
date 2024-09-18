@@ -24,51 +24,64 @@
     </header>
     <main>
         <article>
-            <h1>Estou aprendendo a criar Media Queries</h1>
+            <h2>Estou aprendendo a criar Media Queries</h2>
             <p>Media queries, ou consultas de mídia, são blocos de código CSS que permitem que o conteúdo de um site se adapte a diferentes dispositivos e tamanhos de tela. 
-            As media queries permitem: Definir estilos diferentes para diferentes dispositivos, Criar um site responsivo, Personalizar a experiência do usuário, Oferecer opções específicas para dispositivos móveis. 
-            As media queries funcionam de forma a: 
-            Definir condições de um CSS específico 
-            Executar testes, como se a tela do usuário é maior que uma certa largura ou resolução 
-            Aplicar um CSS seletivamente para estilizar a página 
-            As media queries são compostas por um media type e pelo menos uma expressão que limita o escopo das folhas de estilo. As expressões usam media features, como largura, altura e cor.</p>
+            As media queries permitem:</p>
+            <ul>
+            <li>Definir estilos diferentes para diferentes dispositivos, 
+            <li>Criar um site responsivo, 
+            <li>Personalizar a experiência do usuário, 
+            <li>Oferecer opções específicas para dispositivos móveis.
+            </ul>
+            <p>As media queries funcionam de forma a:</p>
+            <ul>
+            <li>Definir condições de um CSS específico 
+            <li>Executar testes, como se a tela do usuário é maior que uma certa largura ou resolução 
+            <li>Aplicar um CSS seletivamente para estilizar a página
+            </ul>
+            <p>As media queries são compostas por um media type e pelo menos uma expressão que limita o escopo das folhas de estilo. As expressões usam media features, como largura, altura e cor.</p>
 
             <h2>Tipos de media ou Media types</h2>
-            <p>Sua funcionalidade serve para direcionar determinado CSS para um meio específico de dispositivo, ou seja, definem para qual tipo de media, o CSS que você aplica em seu site será direcionado. <br>Existem vários media types, aqui, citarei alguns:</p>
-        <ul><pre>
-        <li> print: Para impressoras;</li>
-    <em class="pink"> @media print</em> {
-            /* Estilizações CSS */
-        }
+            <p>Sua funcionalidade serve para direcionar determinado CSS para um meio específico de dispositivo, ou seja, definem para qual tipo de media, o CSS que você aplica em seu site será direcionado.</p>
+                
+            <p>Existem vários media types, aqui, citarei alguns:</p>
+            
+<pre>
+    ▲ print: Para impressoras;
+   
+    @media print {
+        /* Estilizações CSS */
+    }
 
-        <li>screen: Para monitores ou outros dispositivos como computadores,
-     tablets e smartphones com telas coloridas e com resolução adequada;</li>
-    <em class="pink">@media screen</em> and <em class="blue">(max-width: 768px)</em>{
-            /* Estilizações CSS */
-        }
+    ▲ screen: Para monitores ou outros dispositivos como computadores, 
+    tablets e smartphones com telas coloridas e com resolução adequada;
+    
+    @media screen and (max-width: 768px){
+        /* Estilizações CSS */
+    }
 
-        <li>handheld: Para dispositivos de mão.</li>
-    <em class="pink"> @media handheld</em> and <em class="blue">(min-width: 700px) and (orientantion: landscape)</em>{
-            /* Estilizações CSS */
-        }
-        
-        <li>all: Para todos os tipos de mídia.</li>
-    <em class="pink"> @media all</em> and <em class="blue">(orientation: landscape)</em>{
-            /* Estilizações CSS */
-        }
-    </pre></ul>
+    ▲ handheld: Para dispositivos de mão.
+    
+    @media handheld and (min-width: 700px) and (orientantion: landscape){
+        /* Estilizações CSS */
+    }
 
-    <p>Midia Query é igual a <em class="pink">Midia Types</em> + <em class="blue">Midia Features</em></p>
+    ▲ all: Para todos os tipos de mídia.
+    @media all and (orientation: landscape){
+        /* Estilizações CSS */
+    }
+    </pre>
+    <p>Media Query é igual a Media Types + Media Features</p>
     <p>Media features são características do user-agent (configurações padrão do navegador), ambiente e dispositivo. Todas essas características podem ser usadas como condições para definir a aplicabilidade do código.</p>
     <pre>
-        As medias types são escritos só entre aspas, não é usado parênteses: 
+        As media types são escritos só entre aspas, não é usado parênteses: 
     
-            &lt;link rel="stylesheet" href="estilos/style.css" <em class="pink">media="all"</em>&gt;
+            &lt;link rel="stylesheet" href="estilos/style.css" media="all"&gt;
     
-        As midias features são escritas entre de parênteses:
+        As media features são escritas entre de parênteses:
     
             &lt;link rel="stylesheet" href="estilos/paisagem.css" 
-        media="<em class="pink">screem and</em> <em class="blue">(orientation:landscape)</em>"&gt;
+        media="screem and (orientation:landscape)"&gt;
         </pre>
         </article>
     </main>
