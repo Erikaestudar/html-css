@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            
+        }
+
+        div.conteiner-reverse {
+            background-color: lightsalmon;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+        }
+
+        div.row-reverse {
+            background-color: rgb(252, 84, 54);
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+        }
+
+        div.item-reverse {
+            background-color: rgb(5, 122, 255);
+            color: white;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div.row-reverse1 {
+            background-color: rgb(252, 84, 54);
+            display: flex;
+            flex-flow: row-reverse wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        flex-direction: row;
+        flex-wrap: wrap;
+    </pre>
+    <div class="conteiner">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+        <div class="item">Exemplo de bloco F</div>
+        <div class="item">Exemplo de bloco G</div>
+    </div>
+
+    <pre>
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+    </pre>
+    <div class="conteiner-reverse">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+        <div class="item">Exemplo de bloco F</div>
+        <div class="item">Exemplo de bloco G</div>
+    </div>
+
+    <pre>
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    </pre>
+    <div class="row-reverse">
+        <div class="item-reverse">Exemplo de bloco A</div>
+        <div class="item-reverse">Exemplo de bloco B</div>
+        <div class="item-reverse">Exemplo de bloco C</div>
+        <div class="item-reverse">Exemplo de bloco D</div>
+        <div class="item-reverse">Exemplo de bloco E</div>
+        <div class="item-reverse">Exemplo de bloco F</div>
+        <div class="item-reverse">Exemplo de bloco G</div>
+    </div>
+
+    <pre>
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+
+        Shorthand
+        flex-flow: row-reverse wrap-reverse;
+    </pre>
+    <div class="row-reverse1">
+        <div class="item-reverse">Exemplo de bloco A</div>
+        <div class="item-reverse">Exemplo de bloco B</div>
+        <div class="item-reverse">Exemplo de bloco C</div>
+        <div class="item-reverse">Exemplo de bloco D</div>
+        <div class="item-reverse">Exemplo de bloco E</div>
+        <div class="item-reverse">Exemplo de bloco F</div>
+        <div class="item-reverse">Exemplo de bloco G</div>
+    </div>
+</body>
+</html>
