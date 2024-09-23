@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            margin-top: 30px;
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;   
+        }
+
+        div#around {
+            justify-content: space-around;    
+        }
+
+        div#evenly {
+            justify-content: space-evenly;
+        }
+
+        div.conteiner2 {
+            background-color: lightsalmon;
+            margin-top: 30px;
+            height: 70px;
+
+            display: flex;
+            flex-flow: row nowrap;   
+        }
+
+        div#start {
+            align-items: start;
+        }
+
+        div#center {
+            align-items: center;
+        }
+
+        div#end {
+            align-items: end;
+            
+           
+        }
+    </style>
+</head>
+<body>
+    <h1>main-axis</h1>
+    <h2>justify-content</h2>
+    <p>space-between</p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <p>space-around</p>
+    <div class="conteiner" id="around">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <p>space-evenly</p>
+    <div class="conteiner" id="evenly">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h1>cross-axis</h1>
+    <h2>align-items</h2>
+    <p>stretch - padrão</p>
+    <div class="conteiner2" id="stretch">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <p>flex-start</p>
+    <div class="conteiner2" class="altura" id="start">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <p>center</p>
+    <div class="conteiner2" id="center">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <p>flex-end</p>
+    <div class="conteiner2" id="end">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
