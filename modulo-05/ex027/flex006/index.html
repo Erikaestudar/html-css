@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            height: 400px;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;    
+        }
+
+        div#start {
+            align-content: flex-start;
+        }
+
+        div#bet {
+            justify-content: space-between;
+        }
+
+        div#between {
+            align-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1>align-items</h1>
+    <p>flex-start</p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+        <div class="item">N</div>
+        <div class="item">o</div>
+        <div class="item">P</div>
+    </div>
+
+    <h1>align-content</h1>
+    <p>flex-start</p>
+    <div class="conteiner" id="start">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+        <div class="item">N</div>
+        <div class="item">o</div>
+        <div class="item">P</div>
+    </div>
+
+    <h1>justify-content</h1>
+    <p>space-between</p>
+    <div class="conteiner" id="bet">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+        <div class="item">N</div>
+        <div class="item">o</div>
+        <div class="item">P</div>
+    </div>
+
+    <h1>align-content</h1>
+    <p>space-between</p>
+    <div class="conteiner" id="between">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+        <div class="item">N</div>
+        <div class="item">o</div>
+        <div class="item">P</div>
+    </div>
+</body>
+</html>
