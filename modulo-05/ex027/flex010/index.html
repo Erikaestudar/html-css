@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        main {
+            background-color: lightcyan;
+            width: 90vw;
+            height: 100vh;
+            margin: auto;
+        }
+
+        main h1 {
+            text-align: center;
+        }
+
+        main p {
+            text-align: justify;
+            text-indent: 20px;
+            padding: 10px;
+        }
+        div.conteiner {
+            background-color: lightsalmon;
+            
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+
+            flex-basis: 190px;
+            flex-shrink: 0;
+        }
+
+        div#wrap {
+            flex-flow: row wrap;
+        }
+
+        div#grow > div.item{
+            flex-grow: 1;
+        }
+
+        div#flex > div.item {
+            background-color: white;
+        }
+        div#i1 {
+            flex: 190px 0 1;
+        }
+
+        div#i2 {
+            flex: 190px 2 0;
+        }
+
+        div#i3 {
+            flex: 190px 1 2;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>flex-shrink e flex-grow</h1>
+        <p> Por padrão eles possuem essa propriedade:</p>
+    <pre>
+    Com o valor 1 (ou qualquer valor diferente de zero e positivo ), significa que pode encolher.
+    
+        flex-shrink: 1;
+
+    Com o valor 0, significa que não pode crescer.
+    
+        flex-grow: 0;
+    </pre>
+        <div class="conteiner">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+
+        <p>Deixando o flex-shrink com o valor <q>0</q> vai ocorrer o overflow, ele vai ter um vazamento para fora do conteiner por ele estar <q>nowrap</q>, caso esteja <q>wrap</q> o item vai quebrar na direção do seu eixo transversal.</p>
+
+        <div class="conteiner" id="wrap">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+
+        <p>Colocando o flex-grow com valor <q>1</q> ele irá ocupar a extensão inteira, com o flex-flow <q>nowrap</q></p>
+        <div class="conteiner" id="grow">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+
+        <p>flex-basis + flex-grow + flex-shrink</p>
+        <div class="conteiner">
+            <div class="item" id="i1">A</div>
+            <div class="item" id="i2">B</div>
+            <div class="item" id="i3">C</div>
+        </div>
+        <div class="conteiner" id="flex">
+            <div class="item" id="i1">flex-grow: 0;<br> flex-shrink: 1;</div>
+            <div class="item" id="i2">flex-grow: 2;<br> flex-shrink: 0;</div>
+            <div class="item" id="i3">flex-grow: 1;<br> flex-shrink: 2;</div>  
+        </div>
+    </main>
+</body>
+</html>
