@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        main {
+            background-color: lightcyan;
+            width: 90vw;
+            height: 100vh;
+            margin: auto;
+        }
+
+        main h1 {
+            text-align: center;
+        }
+
+        main p {
+            text-align: justify;
+            text-indent: 20px;
+            padding: 10px;
+        }
+
+        div.conteiner {
+            background-color: lightsalmon;
+            
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div#i1 {
+            flex: 190px 0 1;
+        }
+
+        div#i2 {
+            flex: 190px 2 0;
+        }
+
+        div#i3 {
+            flex: 190px 1 2;
+        }
+        
+        div#flex > div.item {
+            background-color: white;
+        }
+
+        div#cx1 {
+            flex: 190px 0 1;
+        }
+        div#cx2 {
+            flex: 190px 4 0;
+        }
+        div#cx3 {
+            flex: 190px 1 4;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>flex-basis + flex-shrink + flex-grow</h1>
+        <p>Usando valores diferentes de 1.</p>
+        <div class="conteiner">
+            <div class="item" id="i1">A</div>
+            <div class="item" id="i2">B</div>
+            <div class="item" id="i3">C</div>
+        </div>
+        <div class="conteiner" id="flex">
+            <div class="item" id="i1">flex-grow: 0;<br> flex-shrink: 1;</div>
+            <div class="item" id="i2">flex-grow: 2;<br> flex-shrink: 0;</div>
+            <div class="item" id="i3">flex-grow: 1;<br> flex-shrink: 2;</div>  
+        </div>
+
+        <p>Se dois itens tiver com os valores iguais e um tiver 3, não irá alterar muito. <br> Mas se item tiver o valor 1 e o outro 5, esse terá 5x o tamanho em relação ao que tem o valor 1.</p>
+
+        <div class="conteiner">
+            <div class="item" id="cx1">A</div>
+            <div class="item" id="cx2">B</div>
+            <div class="item" id="cx3">C</div>
+        </div>
+        <div class="conteiner" id="flex">
+            <div class="item" id="cx1">flex-grow: 0;<br> flex-shrink: 1;</div>
+            <div class="item" id="cx2">flex-grow: 5;<br> flex-shrink: 0;</div>
+            <div class="item" id="cx3">f-g: 1;<br> f-s: 4;</div>  
+        </div>
+    </main>
+</body>
+</html>
