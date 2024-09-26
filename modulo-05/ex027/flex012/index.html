@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        main {
+            background-color: rgb(191, 235, 220);
+            width: 90vw;
+            height: 100vh;
+            margin: auto;
+        }
+
+        main h1 {
+            text-align: center;
+        }
+
+        main p {
+            text-align: justify;
+            text-indent: 20px;
+            padding: 10px;
+        }
+
+        div.conteiner {
+            background-color: lightsalmon;
+            
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div#i1 {
+            /*
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 190px;
+            */
+
+            flex: 0 1 190px;
+        }
+
+        div#i2 {
+            /*
+            flex-grow: 2;
+            flex-shrink: 0;
+            flex-basis: 190px;
+            */
+
+            flex: 2 0 190px;
+        }
+
+        div#i3 {
+            /*
+            flex-grow: 1;
+            flex-shrink: 2;
+            flex-basis: 190px;
+            */
+
+            flex: 1 2 190px;
+        }
+        
+        div#flex > div.item {
+            background-color: white;
+        }
+
+        div#cx1 {
+            /*
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 150px;
+            */
+
+            flex: 1 0 200px;
+        }
+        div#cx2 {
+            /*
+            flex-grow: 5;
+            flex-shrink: 0;
+            flex-basis: 150px;
+            */
+
+            flex: 1 1 150px;
+        }
+        div#cx3 {
+            /*
+            flex-grow: 1;
+            flex-shrink: 4;
+            flex-basis: 150px;
+            */
+
+            flex: 1 8 auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 400px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>flex-grow + flex-shrink + flex-basis</h1>
+        <p>SHORTHAND - flex (flex-grow + flex-shrink + flex-basis)</p>
+        <p>Usando valores diferentes de 1.</p>
+        <div class="conteiner">
+            <div class="item" id="i1">A</div>
+            <div class="item" id="i2">B</div>
+            <div class="item" id="i3">C</div>
+        </div>
+        <div class="conteiner" id="flex">
+            <div class="item" id="i1">flex: 0 1 190px</div>
+            <div class="item" id="i2">flex: 2 0 190px</div>
+            <div class="item" id="i3">flex: 1 2 190px</div>  
+        </div>
+
+        <p>Se dois itens tiver com os valores iguais e um tiver 3, não irá alterar muito. <br> Mas se item tiver o valor 1 e o outro 5, esse terá 5x o tamanho em relação ao que tem o valor 1.</p>
+
+        <div class="conteiner">
+            <div class="item" id="cx1">A</div>
+            <div class="item" id="cx2">B</div>
+            <div class="item" id="cx3">C</div>
+        </div>
+
+        <div class="conteiner" id="flex">
+            <div class="item" id="cx1">A</div>
+            <div class="item" id="cx2">B</div>
+            <div class="item" id="cx3">C</div>  
+        </div>
+        <ul>
+            <li>A - flex: 1 0 200px</li>
+            <li>B - flex: 1 1 150px</li>
+            <li>C - flex: 1 8 auto;</li>
+        </ul>
+        <table>
+            <caption>flex = flex-grow + flex-shrink + flex-basis</caption>
+            <tr>
+                <th>Flex Valor Simplificado</th>
+                <th>Flex Valor Completo</th>
+            </tr>
+            <tr>
+                <td>flex: intial;</td>
+                <td>flex: 0 1 auto;</td>
+            </tr>
+            <tr>
+                <td>flex: none;</td>
+                <td>flex: 0 0 auto;</td>
+            </tr>
+            <tr>
+                <td>flex: auto;</td>
+                <td>flex: 1 1 auto;</td>
+            </tr>
+            <tr>
+                <td>flex: 3;</td>
+                <td>flex: 3 1 auto;</td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
