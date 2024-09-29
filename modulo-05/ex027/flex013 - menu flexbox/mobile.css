@@ -11,3 +11,7 @@ header > h1 {
 header > nav > a {
     width: 100vw;
 }
+
+main {
+    width: 90vw;
+}
