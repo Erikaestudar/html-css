@@ -1,15 +1,21 @@
 @charset "UTF-8";
 
 header, header > nav {
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 header > h1 {
     flex-basis: 50px;
 }
 
-header > nav > a {
-    width: 100vw;
+span#burguer {
+    display: block;
+}
+
+span#burguer, header > nav > a {
+    width: 95vw;
 }
 
 main {

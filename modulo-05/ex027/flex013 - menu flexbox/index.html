@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Flexbox</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/mobile.css" media="screen and (max-width: 580px)">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
-        <nav>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <nav id="itens">
             <a href="#">Opção 1</a>
             <a href="#">Opção 2</a>
             <a href="#">Opção 3</a>
@@ -24,5 +26,24 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem aliquam, eligendi doloribus impedit asperiores tempore quo voluptate, rerum perferendis architecto provident magni eveniet praesentium excepturi quas. Blanditiis iure corporis minus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga porro itaque esse, praesentium reiciendis, libero ex aut quae tempora in modi dolore. Harum illum error molestias quod itaque modi a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quos magni tempora, sint nobis necessitatibus earum ut nihil consectetur culpa at omnis sapiente corporis minus dolor? Ad quaerat repellendus labore.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis repellat sequi saepe iste sed temporibus sint autem necessitatibus vitae. Excepturi quaerat alias eveniet cupiditate libero recusandae blanditiis natus perferendis tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis amet explicabo. Corporis earum ex obcaecati eaque. Fuga incidunt aliquam omnis, neque magni quis recusandae velit iure! Nulla, accusamus aut?</p>
     </main>
+
+    <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 580) {
+                itens.style.display = 'flex'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (itens.style.display == 'flex') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'flex'
+            }
+        }
+    </script>
 </body>
 </html>
