@@ -65,3 +65,9 @@ main {
 main h2, p {
     padding: 10px;
 }
+
+main iframe {
+    width: 76vw;
+    min-height: 80vh;
+}
+

@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     header {
         padding: 10px;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
     }
@@ -19,10 +19,11 @@
     header > nav {
         flex-flow: row wrap;
         justify-content: flex-end;
+        align-items: center;
     }
 
     header > nav > a {
-        width: 90px;
+        width: 100px;
         border-radius: 5px;
     }
 

@@ -13,24 +13,27 @@
         <h1>Meu Site</h1>
         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
         <nav id="itens">
-            <a href="#">Opção 1</a>
-            <a href="#">Opção 2</a>
-            <a href="#">Opção 3</a>
-            <a href="#">Opção 4</a>
-            <a href="#">Opção 5</a>
-            <a href="#">Opção 6</a>
+            <a href="../flex003/index.html" target="frame">Opção 01</a>
+            <a href="../flex004/index.html" target="frame">Opção 02</a>
+            <a href="../flex005/index.html" target="frame">Opção 03</a>
+            <a href="../flex006/index.html" target="frame">Opção 04</a>
+            <a href="../flex007/index.html" target="frame">Opção 05</a>
+            <a href="../flex008/index.html" target="frame">Opção 06</a>
+            <a href="../flex009/index.html" target="frame">Opção 07</a>
+            <a href="../flex010/index.html" target="frame">Opção 08</a>
+            <a href="../flex011/index.html" target="frame">Opção 09</a>
+            <a href="../flex012/index.html" target="frame">Opção 10</a>
         </nav>
     </header>
     <main>
         <h2>Teste de Flexbox com Media query</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eum rerum esse commodi, natus illum molestiae minus distinctio ipsa nam hic voluptatum placeat, veniam vitae est quae necessitatibus, consectetur in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nam accusamus dicta harum itaque? Maxime eveniet ducimus voluptatum reiciendis dolores magnam perspiciatis saepe dolorem dicta libero! Nihil harum aut alias? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eos earum corrupti officiis eveniet iure mollitia et soluta esse quos. Repellat eum praesentium laboriosam quo unde architecto magnam, illum iste.</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta ipsa beatae pariatur omnis incidunt, sint fugiat vero quae animi quam maiores dignissimos eius cum esse culpa? Quibusdam esse recusandae odit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nihil doloribus possimus nesciunt animi voluptates alias soluta est illum impedit explicabo aliquam quam, necessitatibus quae, quo fugiat quibusdam error quisquam.</p>
+        <iframe name="frame" src="../flex003/index.html" frameborder="0"></iframe>
     </main>
 
     <script>
 
         function mudouTamanho() {
-            if (window.innerWidth >= 800) {
+            if (window.innerWidth >= 1000) {
                 itens.style.display = 'block'
             } else {
                 itens.style.display = 'none'
