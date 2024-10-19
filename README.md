@@ -13,9 +13,7 @@ Estou aprendendo a criar sites e agora vou gerenciar meus repositórios.
 * <p><a href="https://erikaestudar.github.io/html-css/modulo-01/html-css-desafios/d008/index.html">Executar o desafio 008</a> Módulo 01</p>
 
 * <p><a href="https://erikaestudar.github.io/html-css/modulo-01/html-css-desafios/d009/index.html">Executar o desafio 009</a> Módulo 01</p>
-* <p><a href="https://erikaestudar.github.io/html-css/modulo-01/html-css-desafios/d009/pg002.html">Executar o desafio 009 pg002</a> Módulo 01</p>
-* <p><a href="https://erikaestudar.github.io/html-css/modulo-01/html-css-desafios/d009/pg003.html">Executar o desafio 009 pg003</a> Módulo 01</p>
-* <p><a href="https://erikaestudar.github.io/html-css/modulo-01/html-css-desafios/d009/pg004.html">Executar o desafio 009 pg004</a> Módulo 01</p>
+
 * <p><a href="https://erikaestudar.github.io/html-css/modulo-02/html-css-desafios/d010/d010.html">Executar o desafio 010</a> Módulo 02</p>
 * <p><a href="https://erikaestudar.github.io/html-css/modulo-03/html-css-desafios/d011/index.html">Executar o desafio 011</a> Módulo 03</p>
 * <p><a href="https://erikaestudar.github.io/html-css/modulo-03/html-css-desafios/d012/index.html">Executar o desafio 012</a> Módulo 03</p>
