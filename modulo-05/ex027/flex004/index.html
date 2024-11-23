@@ -10,53 +10,88 @@
             margin-top: 30px;
 
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
+            flex-flow: row wrap;
+            width: 200px;
+            height: 300px;
         }
 
         div.item {
             background-color: lightskyblue;
             border: 1px solid black;
             text-align: center;   
+            width: 50px;
+            height: 50px;
+        }
+
+        h2.aliT {
+            color: darkmagenta;
+        }
+
+        div#between {
+            justify-content: space-between;
+        }
+        div#aliCon {
+            align-content: space-between;
         }
 
         div#around {
             justify-content: space-around;    
         }
+        div#aliAro {
+            align-content: space-around;
+        }
 
         div#evenly {
             justify-content: space-evenly;
+        }
+        div#aliEve {
+            align-content: space-evenly;
         }
 
         div.conteiner2 {
             background-color: lightsalmon;
             margin-top: 30px;
-            height: 70px;
+            width: 300px;
+            height: 200px;
 
             display: flex;
-            flex-flow: row nowrap;   
+            flex-flow: row wrap;   
+        }
+
+        div#stretch {
+            align-items: stretch;
+        }
+        div#aliStr {
+            align-content: stretch;
         }
 
         div#start {
-            align-items: start;
+            align-items: flex-start;
+        }
+        div#aliStart {
+            align-content: flex-start;
         }
 
         div#center {
             align-items: center;
         }
-
+        div#aliCen {
+            align-content: center;
+        }
+        
         div#end {
-            align-items: end;
-            
-           
+            align-items: flex-end; 
+        }
+        div#aliEnd {
+            align-content: flex-end; 
         }
     </style>
 </head>
 <body>
-    <h1>main-axis</h1>
+    <h1>Em relação ao main-axis</h1>
     <h2>justify-content</h2>
     <p>space-between</p>
-    <div class="conteiner">
+    <div class="conteiner" id="between">
         <div class="item">A</div>
         <div class="item">B</div>
         <div class="item">C</div>
@@ -66,6 +101,21 @@
         <div class="item">G</div>
     </div>
 
+    <h1>Em relação ao cross-axis</h1>
+    <h2 class="aliT">align-content</h2>
+    <p>space-between</p>
+    <div class="conteiner" id="aliCon">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h1>Em relação ao main-axis</h1>
+    <h2>justify-content</h2>
     <p>space-around</p>
     <div class="conteiner" id="around">
         <div class="item">A</div>
@@ -77,6 +127,21 @@
         <div class="item">G</div>
     </div>
 
+    <h1>Em relação ao cross-axis</h1>
+    <h2 class="aliT">align-content</h2>
+    <p>space-around</p>
+    <div class="conteiner" id="aliAro">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h1>Em relação ao main-axis</h1>
+    <h2>justify-content</h2>
     <p>space-evenly</p>
     <div class="conteiner" id="evenly">
         <div class="item">A</div>
@@ -88,7 +153,20 @@
         <div class="item">G</div>
     </div>
 
-    <h1>cross-axis</h1>
+    <h1>Em relação ao cross-axis</h1>
+    <h2 class="aliT">align-content</h2>
+    <p>space-evenly</p>
+    <div class="conteiner" id="aliEve">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h1>Em relação ao cross-axis</h1>
     <h2>align-items</h2>
     <p>stretch - padrão</p>
     <div class="conteiner2" id="stretch">
@@ -101,8 +179,9 @@
         <div class="item">G</div>
     </div>
 
-    <p>flex-start</p>
-    <div class="conteiner2" class="altura" id="start">
+    <h2 class="aliT">align-content</h2>
+    <p>stretch - padrão</p>
+    <div class="conteiner2" id="aliStr">
         <div class="item">A</div>
         <div class="item">B</div>
         <div class="item">C</div>
@@ -112,6 +191,31 @@
         <div class="item">G</div>
     </div>
 
+    <h2>align-items</h2>
+    <p>flex-start</p>
+    <div class="conteiner2" id="start">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h2 class="aliT">align-content</h2>
+    <p>flex-start</p>
+    <div class="conteiner2" id="aliStart">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h2>align-items</h2>
     <p>center</p>
     <div class="conteiner2" id="center">
         <div class="item">A</div>
@@ -123,8 +227,33 @@
         <div class="item">G</div>
     </div>
 
+    <h2 class="aliT">align-content</h2>
+    <p>center</p>
+    <div class="conteiner2" id="aliCen">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h2>align-items</h2>
     <p>flex-end</p>
     <div class="conteiner2" id="end">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h2 class="aliT">align-content</h2>
+    <p>flex-end</p>
+    <div class="conteiner2" id="aliEnd">
         <div class="item">A</div>
         <div class="item">B</div>
         <div class="item">C</div>
